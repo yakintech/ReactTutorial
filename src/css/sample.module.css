@@ -1,0 +1,19 @@
+p{
+    color:tomato;
+    font-size: 2rem;
+}
+
+.main1{
+    color:blueviolet;
+}
+
+.main2{
+    color:brown;
+}
+.main3{
+    color:purple
+}
+
+p:hover{
+    color: royalblue;
+}
