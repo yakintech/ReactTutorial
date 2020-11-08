@@ -14,6 +14,9 @@ import { DatePicker, Button, Row, Col } from 'antd';
 import locale from 'antd/es/date-picker/locale/tr_TR';
 import Statesample2 from "./components/Statesample2";
 import Formelement from "./components/Formelement";
+import Todolist from "./components/Todolist";
+import Todolistant from "./components/Todolistant";
+import Modalexample from "./components/Modalexample";
 
 function App() {
   let diller = ['Csharp', 'JS', 'SQL', 'CSS'];
@@ -25,8 +28,9 @@ function App() {
     <div>
 
       <div>
-
-        <Formelement></Formelement>
+        <Modalexample></Modalexample>
+        {/* <Todolist></Todolist> */}
+        {/* <Formelement></Formelement> */}
         {/* <Statesample2></Statesample2> */}
         {/* <Onewaybind></Onewaybind> */}
 

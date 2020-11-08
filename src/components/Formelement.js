@@ -21,6 +21,7 @@ function Formelement() {
 
     return (
         <div>
+            {/* inputun value değerini (country) değiştirmeniz için state değiştirmeniz gerekir. Dolayısıyla onChange yardımıyla state değişimini tetikledim. e objesi input un son halini bana veriyor  */}
             <input type="text" name="country" value={country} onChange={(e)=> changeCountry(e.target.value)} />
 
             <select value={metal} onChange={(e)=> changeMetal(e.target.value)}>
