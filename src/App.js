@@ -12,6 +12,8 @@ import Usercard from "./components/Usercard";
 import 'antd/dist/antd.css';
 import { DatePicker, Button, Row, Col } from 'antd';
 import locale from 'antd/es/date-picker/locale/tr_TR';
+import Statesample2 from "./components/Statesample2";
+import Formelement from "./components/Formelement";
 
 function App() {
   let diller = ['Csharp', 'JS', 'SQL', 'CSS'];
@@ -23,25 +25,30 @@ function App() {
     <div>
 
       <div>
-        <Button type="primary">Gönder</Button>
 
-        <Row>
+        <Formelement></Formelement>
+        {/* <Statesample2></Statesample2> */}
+        {/* <Onewaybind></Onewaybind> */}
+
+        {/* <Button type="primary">Gönder</Button> */}
+
+        {/* <Row>
           <Col span={12}>col-12</Col>
           <Col span={12}>col-12</Col>
-        </Row>
+        </Row> */}
 
       </div>
-      <div>
+      {/* <div>
         <DatePicker locale={locale} />
 
-      </div>
+      </div> */}
 
       {/* <input type="date" className="antdate" /> */}
 
       {/* <Csssample></Csssample> */}
       {/* <Useeffectsample></Useeffectsample> */}
       {/* <Onewaybind2></Onewaybind2> */}
-      <Usercard name={'Çağatay'} surname={'Yıldız'} age={34} languages={diller} country={'TR'} hi={hello}></Usercard>
+      {/* <Usercard name={'Çağatay'} surname={'Yıldız'} age={34} languages={diller} country={'TR'} hi={hello}></Usercard> */}
 
     </div>
   )
