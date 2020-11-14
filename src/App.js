@@ -19,6 +19,7 @@ import Todolistant from "./components/Todolistant";
 import Modalexample from "./components/Modalexample";
 import Httpexample from './components/Httpexample'
 import Httppostexample from "./components/Httppostexample";
+import Categoryislem from "./components/Categoryislem";
 
 function App() {
   let diller = ['Csharp', 'JS', 'SQL', 'CSS'];
@@ -30,7 +31,8 @@ function App() {
     <div>
 
       <div>
-        <Httppostexample></Httppostexample>
+        <Categoryislem></Categoryislem>
+        {/* <Httppostexample></Httppostexample> */}
         {/* <Httpexample></Httpexample> */}
         {/* <Todolist></Todolist> */}
         {/* <Modalexample></Modalexample> */}
