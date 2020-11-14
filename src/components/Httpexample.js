@@ -7,7 +7,9 @@ function Httpexample() {
     const [suppliers, setSuppliers] = useState([]);
     const [datacount, setDatacount] = useState(0);
     const [searchdata, setSearchdata] = useState('');
+    //Datanın orjinalini arka tarafta saklıyorum.
     const [originaldata, setOriginaldata] = useState([]);
+
 
     // Virgülden sonraki boş dizi bu hooku component render sonrası sadece bir kez çalıştırır
     useEffect(() => {
@@ -17,11 +19,8 @@ function Httpexample() {
                 setSuppliers(result);
                 setOriginaldata(result);
             }
-
             )
     }, []);
-
-
 
 
     const changeDatacount = (count) => {
