@@ -5,9 +5,20 @@ function Useeffectsample() {
     const [ad, setName] = useState('Çağatay');
     const [soyad, setSurname] = useState('Yıldız');
 
+
+    //Her update sonrası çalışır
     useEffect(()=>{
-        console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXXX');
+        console.log('State updated');
     })
+
+
+    //Sadece bir kez çalışıyor
+    useEffect(() => {
+        console.log('State finish!');
+    }, [])
+
+
+
 
     useEffect(() => {
         console.log('Soyad state değişti!');

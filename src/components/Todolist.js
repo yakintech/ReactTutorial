@@ -11,7 +11,12 @@ function Todolist() {
 
     const addKisi = () => {
         setKisiler([...kisiler, kisi]);
-        changeKisi('');
+        // changeKisi('');
+    }
+
+    const deleteKisi = (key)=>{
+       delete kisiler[key];
+       setKisiler([kisiler]);
     }
 
     return (
@@ -25,7 +30,7 @@ function Todolist() {
                 <ul>
                     {
                         kisiler.map((item, key) =>
-                            (<li key={key}>{item}</li>)
+                            (<li onClick={()=> deleteKisi(key)} key={key}>{item}</li>)
                         )
                     }
                 </ul>

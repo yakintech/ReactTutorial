@@ -31,7 +31,6 @@ function Todolistant() {
                 </Col>
             </Row>
 
-
             <div>
                 <List
                     header={<div>Kişiler</div>}

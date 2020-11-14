@@ -17,6 +17,7 @@ import Formelement from "./components/Formelement";
 import Todolist from "./components/Todolist";
 import Todolistant from "./components/Todolistant";
 import Modalexample from "./components/Modalexample";
+import Httpexample from './components/Httpexample'
 
 function App() {
   let diller = ['Csharp', 'JS', 'SQL', 'CSS'];
@@ -28,7 +29,9 @@ function App() {
     <div>
 
       <div>
-        <Modalexample></Modalexample>
+        <Httpexample></Httpexample>
+        {/* <Todolist></Todolist> */}
+        {/* <Modalexample></Modalexample> */}
         {/* <Todolist></Todolist> */}
         {/* <Formelement></Formelement> */}
         {/* <Statesample2></Statesample2> */}
