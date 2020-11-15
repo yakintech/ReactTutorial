@@ -20,6 +20,15 @@ import Modalexample from "./components/Modalexample";
 import Httpexample from './components/Httpexample'
 import Httppostexample from "./components/Httppostexample";
 import Categoryislem from "./components/Categoryislem";
+import About from './components/About'
+import Blog from './components/Blog'
+import Contact from './components/Contact'
+import Userlist from "./components/Userlist";
+import Userdetail from "./components/Userdetail";
+
+
+
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom"
 
 function App() {
   let diller = ['Csharp', 'JS', 'SQL', 'CSS'];
@@ -30,8 +39,58 @@ function App() {
   return (
     <div>
 
+      <BrowserRouter>
+        <ul>
+          <li>
+            <Link to="/users">User List</Link>
+          </li>
+          <li>
+            <Link to="/About">About</Link>
+          </li>
+          <li>
+            <Link to="/Blog">Blog</Link>
+          </li>
+          <li>
+            <Link to="/Contact">Contact</Link>
+          </li>
+
+        </ul>
+        <Switch>
+
+          <Route path="/about">
+            <About />
+          </Route>
+
+          <Route exact path="/users">
+            <Userlist />
+          </Route>
+
+          
+          <Route path="/users/:id">
+            <Userdetail />
+          </Route>
+
+
+
+
+          <Route path="/blog">
+            <Blog />
+          </Route>
+
+          <Route path="/contact">
+            <Contact />
+          </Route>
+
+        </Switch>
+      </BrowserRouter>
+
+
+
+
       <div>
-        <Categoryislem></Categoryislem>
+
+
+        {/* <Categoryislem></Categoryislem> */}
         {/* <Httppostexample></Httppostexample> */}
         {/* <Httpexample></Httpexample> */}
         {/* <Todolist></Todolist> */}
