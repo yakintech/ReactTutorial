@@ -25,10 +25,20 @@ import Blog from './components/Blog'
 import Contact from './components/Contact'
 import Userlist from "./components/Userlist";
 import Userdetail from "./components/Userdetail";
-
-
-
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom"
+import Nomatch from "./components/Nomatch";
+
+// const routes = [
+//   {
+//     path: '/blog',
+//     component: Blog
+//   },
+//   {
+//     path: '/contact',
+//     component: Contact
+//   },
+
+// ]
 
 function App() {
   let diller = ['Csharp', 'JS', 'SQL', 'CSS'];
@@ -56,7 +66,6 @@ function App() {
 
         </ul>
         <Switch>
-
           <Route path="/about">
             <About />
           </Route>
@@ -65,13 +74,10 @@ function App() {
             <Userlist />
           </Route>
 
-          
+
           <Route path="/users/:id">
             <Userdetail />
           </Route>
-
-
-
 
           <Route path="/blog">
             <Blog />
@@ -80,6 +86,12 @@ function App() {
           <Route path="/contact">
             <Contact />
           </Route>
+
+          <Route path="*">
+            <Nomatch />
+          </Route>
+
+
 
         </Switch>
       </BrowserRouter>
@@ -123,6 +135,19 @@ function App() {
     </div>
   )
 
+}
+
+
+function RouteWithSubRoutes(route) {
+  return (
+    <Route
+      path={route.path}
+      render={props => (
+        // pass the sub-routes down to keep nesting
+        <route.component {...props} routes={route.routes} />
+      )}
+    />
+  );
 }
 
 export default App;
