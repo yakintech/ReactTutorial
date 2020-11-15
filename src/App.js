@@ -27,6 +27,8 @@ import Userlist from "./components/Userlist";
 import Userdetail from "./components/Userdetail";
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom"
 import Nomatch from "./components/Nomatch";
+import Postlist from "./components/Postlist";
+import Postdetail from "./components/Postdetail";
 
 // const routes = [
 //   {
@@ -63,6 +65,9 @@ function App() {
           <li>
             <Link to="/Contact">Contact</Link>
           </li>
+          <li>
+            <Link to="/Postlist">Postlit</Link>
+          </li>
 
         </ul>
         <Switch>
@@ -85,6 +90,14 @@ function App() {
 
           <Route path="/contact">
             <Contact />
+          </Route>
+
+          <Route exact path="/Postlist">
+            <Postlist />
+          </Route>
+
+          <Route path="/Postlist/:id">
+            <Postdetail />
           </Route>
 
           <Route path="*">
