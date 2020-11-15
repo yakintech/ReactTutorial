@@ -66,7 +66,7 @@ function App() {
             <Link to="/Contact">Contact</Link>
           </li>
           <li>
-            <Link to="/Postlist">Postlit</Link>
+            <Link to="/Postlist">Post List</Link>
           </li>
 
         </ul>
